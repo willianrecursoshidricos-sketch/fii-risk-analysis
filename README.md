@@ -108,11 +108,14 @@ Principais características:
 
 ## 📈 Exemplos do Dashboard
 
-### 🔴🟡🟢 Alertas de Risco
-![Alertas](powerbi/dashboard_overview.png)
+### 🔴🟡🟢 Visão Geral dos Alertas
+![Visão Geral](powerbi/dashboard_overview.png)
 
-### 📊 Análise por Setor
-![Setor](powerbi/alerta_setor.png)
+### 🏢 Análise de Risco por Setor
+![Alerta por Setor](powerbi/alerta_setor.png)
+
+### 📊 Análise Individual dos Fundos
+![Alerta por Fundo](powerbi/alerta_fundos.png)
 
 ---
 
