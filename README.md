@@ -1,14 +1,21 @@
-# fii-risk-analysis
-Análise de risco de Fundos Imobiliários brasileiros usando Web Scraping, regras técnicas e Power BI
-# 📊 Análise de Risco de Fundos Imobiliários Brasileiros
+# 📊 fii-risk-analysis
+Análise de risco de Fundos Imobiliários brasileiros com Web Scraping, Machine Learning e Power BI
+
+---
+
+## 📌 Sobre o Projeto
 
 Este projeto tem como objetivo analisar Fundos Imobiliários (FIIs) negociados no Brasil,
-criando **alertas de risco de dividendos e setor**, além de um **score técnico**, utilizando:
+utilizando dados públicos para criar **alertas de risco relacionados a dividendos e setores de atuação**.
 
-- Web Scraping
-- Análise de dados em Python
-- Regras técnicas (risk scoring)
-- Visualização em Power BI
+A proposta não é prever preços ou recomendar investimentos, mas sim **organizar informações
+e destacar comportamentos atípicos**, auxiliando análises exploratórias de forma visual e objetiva.
+
+O projeto combina:
+- Coleta automatizada de dados
+- Análise estatística e técnica
+- Machine Learning não supervisionado
+- Visualização interativa em Power BI
 
 ---
 
@@ -16,35 +23,81 @@ criando **alertas de risco de dividendos e setor**, além de um **score técnico
 
 ### 1️⃣ Coleta de Dados (Web Scraping)
 
-Os dados utilizados neste projeto foram obtidos a partir de informações
-publicamente disponíveis no site **Funds Explorer**  
-(https://www.fundsexplorer.com.br).
+Os dados utilizados foram obtidos a partir de informações **publicamente disponíveis**
+no site **Funds Explorer**:
 
-A coleta foi realizada por meio de técnicas de Web Scraping, com o objetivo
-exclusivo de **análise educacional e exploratória**, respeitando o caráter
-informativo dos dados disponibilizados pela plataforma.
+https://www.fundsexplorer.com.br
 
-Os dados coletados incluem:
-- Fundos Imobiliários (tickers)
-- Setor de atuação
-- Dividend Yield
-- Liquidez diária
-- Indicadores de mercado (ex: P/VP)
+A coleta foi realizada por meio de técnicas de Web Scraping, com finalidade **educacional
+e exploratória**, respeitando o caráter informativo da plataforma.
 
+Principais dados coletados:
+- Ticker dos Fundos Imobiliários  
+- Setor de atuação  
+- Dividend Yield  
+- Liquidez diária  
+- Indicadores de mercado (ex.: P/VP)
 
-### 2️⃣ Engenharia de Variáveis
-- Normalização dos dados
-- Criação de indicadores técnicos
-- Construção do `SCORE_TECNICO`
+---
 
-### 3️⃣ Alertas de Risco
-- `ALERTA_DIVIDENDO`: risco de queda de dividendos
-- `ALERTA_SETOR`: risco estrutural do setor do FII
+### 2️⃣ Tratamento dos Dados e Engenharia de Variáveis
 
-### 4️⃣ Dashboard Interativo (Power BI)
-- Visualização clara e didática
-- Foco em usuários leigos
-- Indicadores visuais de risco (cores e ícones)
+Após a coleta, os dados passaram por etapas de preparação, incluindo:
+
+- Limpeza e padronização das variáveis  
+- Tratamento de valores ausentes  
+- Normalização de indicadores numéricos  
+- Construção de métricas auxiliares  
+- Criação de um **score técnico (`SCORE_TECNICO`)**
+
+Essas etapas permitem transformar dados brutos em informações comparáveis
+entre diferentes fundos.
+
+---
+
+### 3️⃣ Machine Learning – Detecção de Comportamentos Atípicos
+
+Foi aplicada uma abordagem de **Machine Learning não supervisionado** utilizando
+o algoritmo **Isolation Forest**.
+
+O modelo é utilizado para:
+- Identificar FIIs com comportamento fora do padrão
+- Detectar possíveis anomalias nos indicadores analisados
+- Apoiar a classificação de risco de forma estatística
+
+O modelo não realiza previsões de preço nem recomendações de investimento,
+sendo utilizado apenas como **ferramenta auxiliar de análise**.
+
+---
+
+### 4️⃣ Geração de Alertas de Risco
+
+Com base nos indicadores técnicos e nos resultados do modelo, foram criadas
+classificações categóricas de risco:
+
+- **ALERTA_DIVIDENDO**  
+  Indica possíveis riscos relacionados à consistência e estabilidade dos dividendos.
+
+- **ALERTA_SETOR**  
+  Reflete riscos estruturais associados ao setor de atuação do fundo.
+
+Os alertas são classificados como:
+- 🟢 Baixo Risco  
+- 🟡 Risco Moderado  
+- 🔴 Alto Risco  
+
+---
+
+### 5️⃣ Dashboard Interativo (Power BI)
+
+Os resultados finais foram organizados em um **dashboard interativo no Power BI**,
+com foco em clareza visual e usabilidade.
+
+Principais características:
+- Interface simples e intuitiva  
+- Uso de cores e ícones para indicar níveis de risco  
+- Filtros por setor e por fundo  
+- Voltado para usuários leigos ou iniciantes em análise financeira  
 
 ---
 
@@ -59,13 +112,23 @@ Os dados coletados incluem:
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- Python (Pandas, NumPy)
-- Web Scraping
-- Power BI
-- Jupyter Notebook
+
+- Python  
+  - Pandas  
+  - NumPy  
+  - Scikit-learn (Isolation Forest)  
+- Web Scraping  
+- Jupyter Notebook  
+- Power BI  
 
 ---
 
-## ⚠️ Aviso
+## ⚠️ Aviso Importante
+
+Este projeto não constitui recomendação de investimento.
+
+Os resultados apresentados têm caráter **educacional e exploratório**, servindo
+apenas como apoio à análise de dados e estudo do mercado de Fundos Imobiliários.
+
 Este projeto tem fins educacionais e analíticos.
 Não constitui recomendação de investimento.
