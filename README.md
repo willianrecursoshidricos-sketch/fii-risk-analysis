@@ -77,7 +77,7 @@ Os resultados são apresentados em um dashboard interativo no Power BI,
 com foco em **clareza visual e interpretação simples**, mesmo para usuários não técnicos.
 
 ### 🔴🟡🟢 Alertas de Risco
-![Alertas de Risco](powerbidashboard_sector.png)
+![Alertas de Risco](powerbidashboard_setor.png)
 
 ### 🏢 Análise por Setor
 ![Alerta por Setor](powerbi_alerta_setor.png)
