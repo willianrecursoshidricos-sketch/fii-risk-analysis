@@ -117,7 +117,7 @@ Dividend Yield e alertas de risco de forma visual e objetiva.
 ---
 
 ### 🏢 Análise de Risco por Setor
-![Visão Geral](powerbi_dashboard_geral.png)
+![Visão Geral](powerbi_alerta_setor.png)
 
 Análise setorial com detalhamento dos fundos pertencentes a cada categoria,
 permitindo identificar concentrações de risco estrutural.
