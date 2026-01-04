@@ -1,5 +1,10 @@
 # 📊 fii-risk-analysis
-Análise de risco de Fundos Imobiliários brasileiros com Web Scraping, Machine Learning e Power BI
+Análise de risco de Fundos Imobiliários brasileiros com Web Scraping, - Machine Learning não supervisionado (Isolation Forest)
+ e Power BI
+
+O algoritmo Isolation Forest foi utilizado para identificar comportamentos atípicos
+em variáveis como Dividend Yield, liquidez e indicadores técnicos, auxiliando na
+criação de alertas de risco de forma objetiva e exploratória.
 
 ---
 
