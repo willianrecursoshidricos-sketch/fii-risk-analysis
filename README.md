@@ -109,7 +109,7 @@ Principais características:
 ## 📈 Exemplos do Dashboard (Power BI)
 
 ### 🔍 Visão Geral dos Fundos
-![Visão Geral](powerbi/powerbi_visao_geral_fundos.png)
+![Visão Geral](powerbi/powerbidashboard_setor.png)
 
 Tabela com análise individual dos Fundos Imobiliários, exibindo indicadores técnicos,
 Dividend Yield e alertas de risco de forma visual e objetiva.
